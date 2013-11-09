@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  MU106
+
+  Created by Alex Lifantyev on 29.10.13.
+  Copyright (c) 2013 Instup.com. All rights reserved.
+*/
+
+/* User Interface*/
+"ALL ROUTES" = "Все маршруты";
+"SHORT CURRENCY" = "руб.";
+"FAVORITES" = "Избранные";
+"PRICE" = "Цена";
+"ROUTE" = "Маршрут";
+"ROUTES" = "Маршруты";
