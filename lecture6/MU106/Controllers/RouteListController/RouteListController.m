@@ -8,6 +8,7 @@
 
 #import "RouteListController.h"
 #import "UI.h"
+#import "AppDelegate.h"
 
 @interface RouteListController ()
 
@@ -36,11 +37,15 @@
     sharedRouteClient.delegate = self;
     [sharedRouteClient updateRoutesList:^(NSArray *routes) {
         NSEnumerator *enumerator = [routes objectEnumerator];
+        
+        NSManagedObjectContext* context = ((AppDelegate *)[UIApplication sharedApplication].delegate).managedContext;
         id obj;
         
         while ((obj = [enumerator nextObject]))
         {
-            Route *route = [[Route alloc] initWithDictionary:(NSDictionary *)obj];
+            
+
+            Route *route = [NSEntityDescription insertNewObjectForEntityForName:@"Route" inManagedObjectContext:context]; //[[Route alloc] initWithDictionary:(NSDictionary *)obj];
             [self.modelRoutes addObject:route];
         }
         

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Api.h"
 #import "Classes.h"
+#import <CoreData/CoreData.h>
 
 @interface RouteListController : UITableViewController <ApiRouteClientDelegate>
     
